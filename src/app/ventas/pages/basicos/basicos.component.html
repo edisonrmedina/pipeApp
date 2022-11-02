@@ -1,0 +1,78 @@
+<div class="container white">
+    <h1>Pipes Basicos</h1>
+    <p>
+        Pipes incluidos en el common Module
+    </p>
+    <div class="p-grid">
+        <div class="p-col-4">
+            <p-card header="uppercase">
+                {{nombreLower|lowercase}},{{nombreLower | uppercase}}
+            </p-card>
+        </div>
+        <div class="p-col-4">
+            <p-card header="lowercase">
+                {{nombreLower|uppercase}},{{nombreLower | lowercase}}
+            </p-card>
+        </div>
+        <div class="p-col-4">   
+            <p-card header="Capitalize">
+                {{nombreLower|uppercase}},{{nombreLower | titlecase}}
+            </p-card>
+        </div>
+    </div>
+</div>
+
+<div class="container white">
+
+    <h3>Pipes Fechas</h3>
+
+    <p>
+        Pipes para trabajar con Fechas
+    </p>
+    
+    <div class="p-grid">
+
+        <div class="p-col-6">
+            <p-card header="uppercase">
+                <ul>
+                    <li>Fecha Hoy</li>
+                    <li>Fecha | date </li>
+                    <li>Fecha | date: 'short'</li>
+                    <li>Fecha | date: 'long'</li>
+                    <li>Fecha | date: 'Custom Date'</li>
+                </ul>
+
+                <hr>
+                <p><strong>TimeZone</strong></p>
+                <ul>
+                    <li>fecha | date:'long':'GMT-6'</li>
+                    <li>fecha | date:'long':'GMT-5'</li>
+                    <li>fechaHoy | date:'long':'GMT-5':'en'</li>
+                    <li>fechaHoy | date:'long':'GMT-5':'otro idioma importado'</li>
+                </ul>
+            </p-card>
+        </div>
+        
+        
+
+        <div class="p-col-6">
+            <p-card header="uppercase">
+                <ul>
+                    <li>{{fechaHoy}}</li>
+                    <li>{{fechaHoy | date}}</li>
+                    <li>{{fechaHoy | date: 'short'}}</li>
+                    <li>{{fechaHoy | date: 'long'}}</li>
+                    <li>{{fechaHoy | date: 'EEEE d MMMM y h:mm a'}}</li>
+                </ul>
+                <hr>
+                <p><strong>TimeZone</strong></p>
+                <ul>
+                    <li>{{fechaHoy | date:'long':'GMT-6'}}</li>
+                    <li>{{fechaHoy | date:'long':'GMT-5'}}</li>
+                    <li>{{fechaHoy | date:'long':'GMT-5':'en'}}</li>
+                </ul>
+            </p-card>
+        </div>
+
+    </div>
+</div>

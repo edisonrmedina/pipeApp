@@ -1,0 +1,27 @@
+<div class="container white">
+    <h1>Pipes Numeros</h1>
+    <p>
+        Pipes de numeros decimales y Porcentajes
+    </p>
+    <div class="p-grid">
+        <div class="p-col-4">
+            <p-card header="Ventas Netas"
+                    subheader="del presente año">
+                {{ventasBrutas | number:'1.2-2'}}
+            </p-card>
+        </div>
+        <div class="p-col-4">
+            <p-card header="Ventas Brutas"
+                    subheader="del presente año">
+                {{ventasBrutas + 12122212.2 | currency :'USD':'symbol-narrow':'1.0-4'}}
+            </p-card>
+        </div>
+        <div class="p-col-4">
+            <p-card header="Ganacias Porcentual"
+                    subheader="del presente año">
+                {{porcentaje| percent:'2.2-2'}}
+            </p-card>
+        </div>
+    </div>
+</div>
+
